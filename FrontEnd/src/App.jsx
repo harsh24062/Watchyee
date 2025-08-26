@@ -1,8 +1,19 @@
-
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import {Box} from '@mui/material'
 
 function App() {
   return(
-    <div>Hi there</div>
+    <BrowserRouter>
+      <Box sx={{background: '#0000'}}>
+         <Navbar />
+         <Routes>
+            <Route path='/' element={<Feed/>} />         
+            <Route path='/video/:id' element={<VideoDetail/>} />         
+            <Route path='/channel/:id' element={<ChannelDetail/>} />         
+            <Route path='/search/:searchTerm' element={<SearchFeed/>} />         
+         </Routes>
+      </Box>
+    </BrowserRouter>
   )
 }
 
