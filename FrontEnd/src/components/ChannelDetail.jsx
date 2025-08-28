@@ -10,8 +10,6 @@ const ChannelDetail = () => {
   const {id} = useParams()
   const [channelDetail,setChannelDetail] = useState(null)
   const [videos,setVideos] = useState([])
-
-  console.log(channelDetail,videos)
   
   useEffect(()=>{
     // fetch channel info
