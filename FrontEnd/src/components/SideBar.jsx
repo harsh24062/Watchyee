@@ -5,8 +5,8 @@ import {categories} from '../utils/constants'
 const SideBar = ({selectedCategory,setSelectedCategory}) => {
   return (
     <Stack 
-      direction="column"
-      sx={{overflow:"auto", height:{xs:'auto',md:"90%",flexDirection:{xs:'row',md:'column'}}}}>
+      direction={{xs:"row",md:"column"}}
+      sx={{overflow:"auto", height:{xs:'auto',md:"90%"}}}>
        {categories.map((category,index)=>(
         <button key={index} className="category-btn"
           style={{background:category.name===selectedCategory && "blue"}}
